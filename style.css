@@ -1,0 +1,53 @@
+body{
+    background-color: #8fc083;
+  }
+  @keyframes scale{
+    from{
+      transform: scale(1) rotate(-45deg)
+    }
+    12.5%{
+      transform: scale(1.2) rotate(-45deg)
+    }
+    25%{
+      transform: scale(1) rotate(-45deg)
+    }
+    37.5%{
+    transform: scale(1.2) rotate(-45deg)
+    }
+    50%{
+      transform: scale(1) rotate(-45deg)
+    }
+    100%{
+      transform: scale(1) rotate(-45deg)
+    }
+  }
+  
+  .w{
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+    transform: rotate(-45deg);
+    animation-name: scale;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+    margin: auto;
+    margin-top: 200px;
+  }
+  .w::before,
+  .w::after{
+    display: block;
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: pink;
+    position: relative;
+  }
+  .w::before{
+    top: -50px;
+  }
+  .w::after{
+  
+    left: 50px;
+    top: -100px;
+  }  
